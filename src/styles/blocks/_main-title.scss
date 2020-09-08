@@ -1,0 +1,35 @@
+@import '../_variables';
+
+.main-title {
+  top: calc( #{$section-header-height} + 90px );
+  background-color: $white;
+
+  &__img {
+    display: block;
+    padding: 0 0 34px 0;
+    max-width: calc(100% - 190px);
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main-title {
+
+    &__img {
+      max-width: initial;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+  .main-title {
+    font-size: 40px;
+
+    &__img {
+      width: 100%;
+      margin-bottom: 55px;
+    }
+  }
+}

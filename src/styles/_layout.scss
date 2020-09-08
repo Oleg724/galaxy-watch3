@@ -1,0 +1,98 @@
+@import './_variables';
+@import './_mixins';
+
+.container {
+  width: 100%;
+}
+
+.section {
+  width: 100%;
+
+  &--margin {
+    margin: 100px auto 80px auto;
+  }
+
+  &--padding-top {
+    padding-top: 36px;
+  }
+
+  &--white {
+    background-color: $white;
+  }
+
+  &--width-max {
+    max-width: $max-width;
+  }
+
+  &__inner {
+    @include flex-column;
+
+    &--relative {
+      position: relative;
+      height: 100%;
+    }
+
+    &--width-grid {
+      max-width: $grid-width;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    &--width-max {
+      max-width: $max-width;
+      margin: 0 auto;
+    }
+  }
+
+  &__header {
+    height: $section-header-height;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $dark-grey;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .section {
+    &__inner {
+      &--width-grid {
+        width: 91.66%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1390px) {
+  .section {
+    &__inner {
+      &--row  {
+        flex-direction: column!important;
+        align-items: center;
+      }
+    }
+
+    &--toggle-grey {
+      background-color: $white!important;
+    }
+  }
+}
+
+@media screen and (max-width: 1290px) {
+  .section {
+
+    &--padding {
+      padding: 0 8% 0 8%;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .section {
+
+    &__header {
+      height: 87px;
+    }
+  }
+}
